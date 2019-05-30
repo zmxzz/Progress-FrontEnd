@@ -1,0 +1,38 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 220px;
+  background-color: pink;
+}
+
+.sidenav .mat-toolbar {
+  background-color: pink;
+  color: white;
+  font-family: Verdana;
+}
+
+.mat-list-item {
+  font-family: Verdana;
+  color: white;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 0;
+  background-color: skyblue;
+  color: white;
+  font-family: Verdana;
+}
+
+.mat-flat-button {
+  color: white;
+  font-family: Verdana;
+  background-color: transparent;
+}
+
+span {
+  margin-left: 10px;
+}

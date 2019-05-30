@@ -1,0 +1,44 @@
+body {
+    background-color: #2aea47;
+}
+
+mat-card.main {
+    background-color: transparent;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    border-width: 1px;
+    height: 300px;
+    width: 350px;
+    top: 25%;
+    margin: auto;
+}
+
+mat-card.form {
+    height: 300px;
+    width: 80%;
+    top: 16px;
+    margin: auto;
+    display: block;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+mat-label.title {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+}
+
+.label {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 20px;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+}
+
