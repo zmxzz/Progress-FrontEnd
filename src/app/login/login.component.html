@@ -1,16 +1,16 @@
 <body>
     <mat-card class="main">
-        <mat-form-field>
-                <input matInput>Why
-        </mat-form-field>
         <mat-label class="title">Progress Check</mat-label>
         <mat-label class="label">Username</mat-label>
+        <input type="text" [(ngModel)]="username">
+        <mat-label class="label">Password</mat-label>
+        <input type="text" [(ngModel)]="password">
+        <div class="buttons">
+            <button mat-raised-button (click)="register()">Sign Up</button>
+            <button mat-raised-button (click)="login()">Sign In</button>
+        </div>
     </mat-card>
 
-    <mat-card class="form">
-            <mat-form-field>
-                <input matInput>
-            </mat-form-field>
-    </mat-card>
+
 
 </body>

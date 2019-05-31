@@ -1,5 +1,5 @@
 body {
-    background-color: #2aea47;
+    background-color: #8CB978;
 }
 
 mat-card.main {
@@ -14,17 +14,17 @@ mat-card.main {
     margin: auto;
 }
 
-mat-card.form {
-    height: 300px;
-    width: 80%;
-    top: 16px;
-    margin: auto;
+input {
+    background-color: #E2F5D9;
     display: block;
+    margin: 10px auto;
+    width: 90%;
+    height: 30px;
+    outline: none;
+    border-radius: 0.4rem;
 }
 
-mat-form-field {
-    width: 100%;
-}
+
 
 mat-label.title {
     font-family: "Gill Sans", sans-serif;
@@ -40,5 +40,20 @@ mat-label.title {
     margin-top: 15px;
     margin-bottom: 0px;
     margin-left: 20px;
+}
+
+.buttons {
+    width: 100%;
+    height: 50px;
+    margin: 20px auto;
+    display: block;
+}
+
+button {
+    background-color: #E2F5D9;
+    display: inline;
+    text-align: center;
+    width: 40%;
+    margin: 5%;
 }
 

@@ -10,7 +10,7 @@ import {
   MatListModule,
   MatCardModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
