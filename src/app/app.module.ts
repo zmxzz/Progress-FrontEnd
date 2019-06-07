@@ -12,23 +12,32 @@ import {
   MatFormFieldModule,
   MatInputModule,
 } from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
-import { NavComponent } from './nav/nav.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { IndexComponent } from './index.component';
+import { ProfileComponent } from './profile/profile.component'
+import { UserService } from '../service/user.service';
+
 
 const appRoutes: Routes = [
-  {path: '', component: LoginComponent},
-  {path: 'login', component: LoginComponent}
+  {path: '', component: IndexComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
+  {path: 'profile', component: ProfileComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
+    IndexComponent,
+    ProfileComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -45,9 +54,10 @@ const appRoutes: Routes = [
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

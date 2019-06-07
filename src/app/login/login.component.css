@@ -57,3 +57,11 @@ button {
     margin: 5%;
 }
 
+div.main {
+    background-color: transparent;
+    height: 80%;
+    width: 350px;
+    top: 10%;
+    position: relative;
+    margin: auto;
+}

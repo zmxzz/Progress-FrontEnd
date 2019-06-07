@@ -1,0 +1,19 @@
+<body>
+    <div class="main">
+        <mat-label class="title">Sign Up Form</mat-label>
+        <mat-label class="label">Email</mat-label>
+        <input type="text" [(ngModel)]="email"  autocomplete="email">
+        <mat-label class="label">First Name</mat-label>
+        <input type="text" [(ngModel)]="firstName" autocomplete="given-name">
+        <mat-label class="label">Last Name</mat-label>
+        <input type="text" [(ngModel)]="lastName" autocomplete="family-name">
+        <mat-label class="label">Username</mat-label>
+        <input type="text" [(ngModel)]="username" autocomplete="username">
+        <mat-label class="label">Password</mat-label>
+        <input ng-hide="showpassword" ng-model="password" type="password" [(ngModel)]="password">
+        <div class="buttons">
+            <button mat-raised-button (click)="register()">Sign Up</button>
+            <button mat-raised-button (click)="cancel()">Cancel</button>
+        </div>
+    </div>
+</body>
