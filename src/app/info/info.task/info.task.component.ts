@@ -23,7 +23,6 @@ export class InfoTaskComponent implements OnInit{
     currWidth: string;
 
     ngOnInit() {
-        console.log(this.task);
         this.accomplish = this.task['accomplish'];
         this.category = this.task['category'];
         this.taskname = this.task['taskname'];
@@ -46,10 +45,10 @@ export class InfoTaskComponent implements OnInit{
 
     getProgress(): number {
         if (this.accomplish === 'todoList') {
-            return this.doneList.length / this.todoList.length;
+            return this.doneList.length / this.todoList.length * 100;
         }
         else {
-            return this.timeSpent / this.timeRequired;
+            return this.timeSpent / this.timeRequired * 100;
         }
     }
 

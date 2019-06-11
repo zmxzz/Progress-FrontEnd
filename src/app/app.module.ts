@@ -22,6 +22,7 @@ import { RegisterComponent } from './register/register.component';
 import { IndexComponent } from './index.component';
 import { ProfileComponent } from './profile/profile.component'
 import { UserService } from '../service/user.service';
+import { TaskService } from '../service/task.service';
 import { CheckNavComponent } from './check_nav/check_nav.component';
 import { SideNavComponent } from './side_nav/side_nav.component';
 import { InfoPanelComponent } from './info/info.panel/info.panel.component';
@@ -67,7 +68,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpClientModule
   ],
-  providers: [UserService],
+  providers: [UserService, TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
