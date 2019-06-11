@@ -22,6 +22,11 @@ import { RegisterComponent } from './register/register.component';
 import { IndexComponent } from './index.component';
 import { ProfileComponent } from './profile/profile.component'
 import { UserService } from '../service/user.service';
+import { CheckNavComponent } from './check_nav/check_nav.component';
+import { SideNavComponent } from './side_nav/side_nav.component';
+import { InfoPanelComponent } from './info/info.panel/info.panel.component';
+import { InfoTaskComponent } from './info/info.task/info.task.component';
+import { InfoDetailComponent } from './info/info.detail/info.detail.component';
 
 
 const appRoutes: Routes = [
@@ -37,7 +42,12 @@ const appRoutes: Routes = [
     LoginComponent,
     RegisterComponent,
     IndexComponent,
-    ProfileComponent
+    ProfileComponent,
+    CheckNavComponent,
+    SideNavComponent,
+    InfoPanelComponent,
+    InfoTaskComponent,
+    InfoDetailComponent
   ],
   imports: [
     RouterModule.forRoot(

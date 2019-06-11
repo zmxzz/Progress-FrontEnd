@@ -56,4 +56,34 @@ export class UserService {
             );
     }
 
+    getProfile(callback: any): void {
+        const headers = new HttpHeaders({
+            'Authorization': localStorage.getItem('token')
+          });
+          this.http.get(this.serverAddr + '/users/profile', { headers })
+          .subscribe(
+              res => {
+                  callback(res, null);
+              },
+              err => {
+                  callback(null, err);
+              }
+          );
+    }
+
+    getTasks(callback: any): void {
+        const headers = new HttpHeaders({
+            'Authorization': localStorage.getItem('token')
+          });
+          this.http.get(this.serverAddr + '/tasks', { headers })
+          .subscribe (
+              res => {
+                  callback(res, null);
+              },
+              err => {
+                  callback(null, err);
+              }
+          );
+    }
+
 }

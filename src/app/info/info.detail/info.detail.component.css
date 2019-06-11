@@ -1,0 +1,50 @@
+div.container {
+    display: table;
+    width: 95%;
+    margin: auto;
+}
+
+div.status-box {
+    width: 100%;
+    height: 35px;
+    display: flex;
+}
+
+div.button-box {
+    width: 25%;
+    height: 40px;
+    display: flex;
+    margin: 0 0 auto auto;
+}
+
+div.done {
+    margin: auto;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 20px;
+    width: 33%;
+}
+
+div.stage {
+    margin: auto;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 20px;
+    width: 33%;
+    text-align: center;
+}
+
+div.total {
+    margin: auto;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 20px;
+    width: 30%;
+    text-align: right;
+
+}
+
+
+button {
+    height: 90%;
+    width: 50%;
+    margin-right: 10px;
+    font-family: "Gill Sans", sans-serif;
+}

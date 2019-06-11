@@ -1,0 +1,37 @@
+mat-card.nav {
+    background-color: #E2F5D9;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+mat-label.title {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 30px;
+    margin: 0;
+    top: 50%;
+    position: absolute;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 1%;
+}
+
+mat-label.username {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 25px;
+    top: 50%;
+    right: 3%;
+    position: absolute;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+mat-card.side {
+    background-color: #E2F5D9;
+    height: 80%;
+    width: 20%;
+    border-radius: 5px;
+    margin-top: 0px;
+    display: block;
+}
