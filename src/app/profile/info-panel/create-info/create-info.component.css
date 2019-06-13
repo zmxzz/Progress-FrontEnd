@@ -1,0 +1,81 @@
+div.info-box {
+    padding:10px 0;
+    height: 10%;
+    width: 40%;
+}
+
+div.container {
+    height: 100%;
+    width: 100%;
+}
+
+div.todo-box {
+    padding:10px 0;
+    height: 10%;
+    width: 100%;
+}
+
+input {
+    height:25px;
+    vertical-align:middle;
+    position: relative;
+    margin-left: 10%;
+    outline: none;
+    border-radius: 8px;
+}
+
+input.todo {
+    height:25px;
+    vertical-align:middle;
+    position: relative;
+    margin-left: 4%;
+    outline: none;
+    border-radius: 8px;
+    width: 75%;
+}
+
+div.label-box {
+    height:25px;
+    vertical-align:middle;
+    width: 40%;
+    display: inline-block;
+}
+
+div.todo-label-box {
+    height:25px;
+    vertical-align:middle;
+    width: 16%;
+    display: inline-block;
+}
+
+mat-label {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 25px;
+}
+
+mat-label.ask-type {
+    margin: 10% auto;
+    position: relative;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+button {
+    font-family: "Gill Sans", sans-serif;
+    background-color: #8CB978;
+}
+
+button.add-new {
+    width: 100%;
+}
+
+button.done {
+    width: 25%;
+}
+
+button.cancel {
+    width: 25%;
+    position: relative;
+    margin-left: 50%;
+}

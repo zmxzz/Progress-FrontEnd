@@ -30,4 +30,20 @@ export class TaskService {
         );   
     }
 
+    addTask(taskInfo: object, callback): void {
+        const headers = new HttpHeaders({
+            'Content-Type': 'application/json',
+            'Authorization': localStorage.getItem('token')
+          });
+          this.http.post(this.serverAddr + "/tasks/add",
+          taskInfo, { headers })
+          .subscribe(
+              res => {
+                  callback(res, null);
+              });
+              err => {
+                  callback(null, err);
+              }
+    }
+
 }

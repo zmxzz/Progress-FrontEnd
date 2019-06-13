@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../service/user.service';
+import { UserService } from 'src/service/user.service';
 @Component({
     selector: 'app-check-nav',
-    templateUrl: './check_nav.component.html',
-    styleUrls: ['./check_nav.component.css']
+    templateUrl: './check-nav.component.html',
+    styleUrls: ['./check-nav.component.css']
 })
 export class CheckNavComponent implements OnInit { 
     username: string;

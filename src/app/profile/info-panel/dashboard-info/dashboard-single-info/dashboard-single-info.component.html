@@ -1,0 +1,30 @@
+<div class="task" [style.background-color]="selected() ? '#A2C790' : 'transparent'">
+        <mat-label class="title">
+            {{ taskname }}
+        </mat-label>
+        <div class="bar-container">
+            <div class="progress">
+                    {{ currWidth }}
+                <div 
+                class="progress-bar progress-bar-success"
+                [attr.aria-valuenow]="currValue" 
+                aria-valuemin="0" 
+                aria-valuemax="100"
+                [style.width]="currWidth">
+                </div>
+            </div>
+        </div>
+        <ng-container *ngIf="selected()">
+            <div class="container">
+                <div class="status-box">
+                    <div class="done"> {{ status }} </div>
+                    <div class="stage"> {{ stage }} </div>
+                    <div class="total"> {{ total }} </div>
+                </div>
+                <div class="button-box">
+                    <button mat-raised-button (click)="deleteTask()" class="delete">Delete</button>
+                    <button mat-raised-button (click)="commitTask()" class="commit">New Commit</button>
+                </div>
+            </div>
+        </ng-container>
+    </div>

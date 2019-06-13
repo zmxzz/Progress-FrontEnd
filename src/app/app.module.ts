@@ -23,12 +23,13 @@ import { IndexComponent } from './index.component';
 import { ProfileComponent } from './profile/profile.component'
 import { UserService } from '../service/user.service';
 import { TaskService } from '../service/task.service';
-import { CheckNavComponent } from './check_nav/check_nav.component';
-import { SideNavComponent } from './side_nav/side_nav.component';
-import { InfoPanelComponent } from './info/info.panel/info.panel.component';
-import { InfoTaskComponent } from './info/info.task/info.task.component';
-import { InfoDetailComponent } from './info/info.detail/info.detail.component';
-
+import { CheckNavComponent } from './profile/check-nav/check-nav.component';
+import { SideNavComponent } from './profile/side-nav/side-nav.component';
+import { InfoPanelComponent } from './profile/info-panel/info-panel-component';
+import { DashboardInfoComponent } from './profile/info-panel/dashboard-info/dashboard-info.component';
+import { DashboardSingleInfoComponent } from './profile/info-panel/dashboard-info/dashboard-single-info/dashboard-single-info.component';
+import { CreateInfoComponent } from './profile/info-panel/create-info/create-info.component';
+import { CommitInfoComponent } from './profile/info-panel/commit-info/commit-info.component';
 
 const appRoutes: Routes = [
   {path: '', component: IndexComponent},
@@ -47,8 +48,10 @@ const appRoutes: Routes = [
     CheckNavComponent,
     SideNavComponent,
     InfoPanelComponent,
-    InfoTaskComponent,
-    InfoDetailComponent
+    DashboardSingleInfoComponent,
+    CreateInfoComponent,
+    DashboardInfoComponent,
+    CommitInfoComponent
   ],
   imports: [
     RouterModule.forRoot(

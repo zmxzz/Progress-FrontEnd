@@ -1,0 +1,13 @@
+<mat-card class="panel">
+    <div class="container" *ngIf="page==='dashboard'">
+        <app-dashboard-info 
+        (taskCommitEvent)="receiveTaskCommit($event)"
+        (pageEvent)="receivePage($event)"></app-dashboard-info>
+    </div>
+    <div class="container" *ngIf="page==='create'">
+        <app-create-info (pageEvent)="receivePage($event)"></app-create-info>
+    </div>
+    <div class="container" *ngIf="page==='commit'">
+        <app-commit-info (pageEvent)="receivePage($event)"></app-commit-info>
+    </div>
+</mat-card>

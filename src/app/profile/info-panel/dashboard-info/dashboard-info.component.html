@@ -1,0 +1,14 @@
+<div class="title">
+        <mat-label class="sort">Sort By: Name</mat-label>
+        <button mat-button class="create" (click)="sendCreate()">Create +</button>
+    </div>
+    <hr>
+    <div class="scrollable">
+        <app-dashboard-single-info 
+        *ngFor="let task of tasks" 
+        [task]="task" 
+        [curr]="currTaskId"
+        (taskEvent)="sendTaskCommit($event)"
+        (click)="assign(task)"
+        ></app-dashboard-single-info>
+</div>

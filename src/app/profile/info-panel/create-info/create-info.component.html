@@ -1,0 +1,57 @@
+<div class="container" *ngIf="accomplish==='ask'">
+        <mat-label class="ask-type">Please Select Progress Type</mat-label>
+        <div class="todo-box">
+                <button mat-raised-button class="done" (click)="setHours()">Hours</button>
+                <button mat-raised-button class="cancel" (click)="setTodoList()">To Do List</button>
+        </div>
+</div>
+
+<div class="container" *ngIf="accomplish!=='ask'">
+    <div class="title">
+            <mat-label class="sort">New Task</mat-label>
+        </div>
+        <hr>
+        <div class="info-box">
+            <div class="label-box">
+                <mat-label>Name</mat-label>
+            </div>
+            <input [(ngModel)]="name">
+        </div>
+        <div class="info-box">
+            <div class="label-box">
+                <mat-label>Category</mat-label>
+            </div>
+            <input [(ngModel)]="category">
+        </div>
+        <ng-container *ngIf="accomplish==='todoList'">
+            <div class="todo-box" *ngFor="let todo of todoList">
+                    <div class="todo-label-box">
+                        <mat-label>{{ todo[1] }}</mat-label>
+                    </div>
+                    <input [(ngModel)]="todo[0]" class="todo">
+                </div>
+                <div class="todo-box">
+                    <button mat-raised-button class="add-new" (click)="addTodo()">+ Add New To Do</button>
+                </div>
+        </ng-container>
+        
+        <ng-container *ngIf="accomplish==='hours'">
+            <div class="info-box">
+                <div class="label-box">
+                    <mat-label>Time Required</mat-label>
+                </div>
+                <input [(ngModel)]="timeRequired">
+            </div>
+            <div class="info-box">
+            <div class="label-box">
+                <mat-label>Time Spent</mat-label>
+            </div>
+            <input [(ngModel)]="timeSpent">
+             </div>
+        </ng-container>
+        
+        <div class="todo-box">
+            <button mat-raised-button class="done" (click)="done()">Done</button>
+            <button mat-raised-button class="cancel" (click)="cancel()">Cancel</button>
+        </div>
+</div>
