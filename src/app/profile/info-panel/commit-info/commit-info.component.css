@@ -1,0 +1,69 @@
+mat-label {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 25px;
+}
+
+mat-label.description {
+    height: 100%;
+    width: 100%;
+}
+
+div.description {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    display: table-cell;
+}
+
+div.status {
+    height: 100%;
+    width: 15%;
+    display: table-cell;
+
+}
+
+button.status {
+    height: 100%;
+    width: 100%;
+}
+
+div.label {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 25px;
+    height: 100%;
+    width: 25%;
+    display: inline-block;
+}
+
+div.line {
+    margin-top: 2%;
+    height: 10%;
+    width: 100%;
+}
+
+input.hours {
+    height: 80%;
+    width: 25%;
+    border-radius: 8px;
+    outline: none;
+}
+
+button {
+    background-color: #8CB978;
+    width: 25%;
+    font-family: "Gill Sans", sans-serif;
+}
+
+button.cancel {
+    margin-left: 50%;
+    position: relative;
+}
+
+div.scrollable {
+    overflow: auto;
+    box-sizing: border-box;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 75%;
+}

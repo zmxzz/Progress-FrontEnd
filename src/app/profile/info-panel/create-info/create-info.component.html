@@ -24,15 +24,17 @@
             <input [(ngModel)]="category">
         </div>
         <ng-container *ngIf="accomplish==='todoList'">
-            <div class="todo-box" *ngFor="let todo of todoList">
-                    <div class="todo-label-box">
-                        <mat-label>{{ todo[1] }}</mat-label>
+            <div class="scrollable">
+                <div class="todo-box" *ngFor="let todo of todoList">
+                        <div class="todo-label-box">
+                            <mat-label>{{ todo[1] }}</mat-label>
+                        </div>
+                        <input [(ngModel)]="todo[0]" class="todo">
                     </div>
-                    <input [(ngModel)]="todo[0]" class="todo">
-                </div>
-                <div class="todo-box">
+            </div>
+            <div class="todo-box">
                     <button mat-raised-button class="add-new" (click)="addTodo()">+ Add New To Do</button>
-                </div>
+            </div>
         </ng-container>
         
         <ng-container *ngIf="accomplish==='hours'">

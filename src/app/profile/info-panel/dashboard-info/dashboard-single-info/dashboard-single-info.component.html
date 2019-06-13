@@ -4,13 +4,13 @@
         </mat-label>
         <div class="bar-container">
             <div class="progress">
-                    {{ currWidth }}
                 <div 
                 class="progress-bar progress-bar-success"
                 [attr.aria-valuenow]="currValue" 
                 aria-valuemin="0" 
                 aria-valuemax="100"
                 [style.width]="currWidth">
+                {{ currWidth }}
                 </div>
             </div>
         </div>

@@ -8,6 +8,6 @@
         <app-create-info (pageEvent)="receivePage($event)"></app-create-info>
     </div>
     <div class="container" *ngIf="page==='commit'">
-        <app-commit-info (pageEvent)="receivePage($event)"></app-commit-info>
+        <app-commit-info (pageEvent)="receivePage($event)" [task]="selectedTask"></app-commit-info>
     </div>
 </mat-card>

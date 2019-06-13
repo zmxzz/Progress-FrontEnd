@@ -40,10 +40,27 @@ export class TaskService {
           .subscribe(
               res => {
                   callback(res, null);
-              });
+              },
               err => {
                   callback(null, err);
-              }
+              });
+    }
+
+    updateTask(taskInfo: object, callback): void {
+        const headers = new HttpHeaders({
+            'Content-Type': 'application/json',
+            'Authorization': localStorage.getItem('token')
+          });
+        this.http.post(this.serverAddr + "/tasks/commit",
+        taskInfo, {headers})
+        .subscribe(
+            res => {
+                callback(res, null);
+            },
+            err => {
+                callback(null, err);
+            }
+        );
     }
 
 }

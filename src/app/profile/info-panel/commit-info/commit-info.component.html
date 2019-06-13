@@ -1,0 +1,49 @@
+<mat-label class='title'> {{ taskname }} </mat-label>
+<hr>
+<ng-container *ngIf="accomplish==='hours'">
+        <div class="line">
+            <div class="label">
+                <mat-label>Time Required(hrs):</mat-label>
+            </div>
+            <div class="label">
+                <mat-label>{{ timeRequired }}</mat-label>
+            </div>
+        </div>
+        <div class="line">
+            <div class="label">
+                <mat-label>Time Spent(hrs):</mat-label>
+            </div>
+            <div class="label">
+                <mat-label>{{ timeSpent }}</mat-label>
+            </div>
+        </div>
+        <div class="line">
+            <div class="label">Adding Time(hrs):</div>
+            <input class="hours" [(ngModel)]="addHour">
+        </div>
+</ng-container>
+
+<ng-container *ngIf="accomplish==='todoList'">
+    <div class="scrollable">
+        <div *ngFor="let pair of statusList">
+                <div class="line">
+                    <div 
+                    class="description"
+                    [style.background-color]="pair[1] ? '#8CB978' : '#E2F5D9'">
+                        <mat-label class="description"> {{pair[0]}} </mat-label>
+                    </div>
+                    <div class="status">
+                        <button 
+                        mat-raised-button
+                        (click)="flip(pair)"
+                        [style.background-color]="pair[1] ? '#8CB978' : '#E2F5D9'"
+                        class="status"> {{pair[1] ? 'Cancel' : 'Done!'}} </button>
+                    </div>
+                </div>
+            </div>
+    </div>
+</ng-container>
+<div class="line">
+        <button mat-raised-button (click)="commit()">Commit</button>
+        <button mat-raised-button class="cancel" (click)="cancel()">Cancel</button>
+    </div>

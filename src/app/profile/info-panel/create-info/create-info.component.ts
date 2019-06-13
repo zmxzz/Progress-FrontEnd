@@ -64,7 +64,7 @@ export class CreateInfoComponent implements OnInit {
         }
         return {
             taskname: this.name,
-            accomplish: 'hours',
+            accomplish: 'todoList',
             category: this.category,
             todoList: postTodoList,
             doneList: []
