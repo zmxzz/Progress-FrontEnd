@@ -11,6 +11,7 @@ import {
   MatCardModule,
   MatFormFieldModule,
   MatInputModule,
+  MatMenuModule
 } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -23,6 +24,7 @@ import { IndexComponent } from './index.component';
 import { ProfileComponent } from './profile/profile.component'
 import { UserService } from '../service/user.service';
 import { TaskService } from '../service/task.service';
+import { PanelService } from '../service/panel.service';
 import { CheckNavComponent } from './profile/check-nav/check-nav.component';
 import { SideNavComponent } from './profile/side-nav/side-nav.component';
 import { InfoPanelComponent } from './profile/info-panel/info-panel-component';
@@ -30,6 +32,8 @@ import { DashboardInfoComponent } from './profile/info-panel/dashboard-info/dash
 import { DashboardSingleInfoComponent } from './profile/info-panel/dashboard-info/dashboard-single-info/dashboard-single-info.component';
 import { CreateInfoComponent } from './profile/info-panel/create-info/create-info.component';
 import { CommitInfoComponent } from './profile/info-panel/commit-info/commit-info.component';
+import { CommitHistoryComponent } from './profile/info-panel/commit-history/commit-history.component';
+import { CalendarHeatmap } from 'angular2-calendar-heatmap';
 
 const appRoutes: Routes = [
   {path: '', component: IndexComponent},
@@ -51,7 +55,9 @@ const appRoutes: Routes = [
     DashboardSingleInfoComponent,
     CreateInfoComponent,
     DashboardInfoComponent,
-    CommitInfoComponent
+    CommitInfoComponent,
+    CalendarHeatmap,
+    CommitHistoryComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -68,10 +74,11 @@ const appRoutes: Routes = [
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    MatMenuModule,
     FormsModule,
     HttpClientModule
   ],
-  providers: [UserService, TaskService],
+  providers: [UserService, TaskService, PanelService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

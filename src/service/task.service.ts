@@ -63,4 +63,21 @@ export class TaskService {
         );
     }
 
+    getCommitHistory(callback): void {
+        const headers = new HttpHeaders({
+            'Content-Type': 'application/json',
+            'Authorization': localStorage.getItem('token')
+          });
+          this.http.get(this.serverAddr + "/tasks/commit",
+          {headers})
+          .subscribe(
+            res => {
+                callback(res, null);
+            },
+            err => {
+                callback(null, err);
+            }
+          );
+    }
+
 }

@@ -1,4 +1,5 @@
 <mat-card class="nav">
     <mat-label class="title">Progress Check</mat-label>
-    <mat-label class="username">{{ username }}</mat-label>
+    <button mat-raised-button class="username" (click)="flip()"> {{username}} </button>
+    <button mat-raised-button class="logout" *ngIf="show" (click)="logout()"> Sign Out </button>
 </mat-card>

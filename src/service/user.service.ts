@@ -20,15 +20,12 @@ export class UserService {
         .subscribe(
             res => {
                 localStorage.setItem('token', res['token']);
-                callback();
+                callback(res, null);
             },
-            error => {
-                console.log("Error: " + error);
-            },
-            () => {
-                console.log("Complete");
+            err => {
+                callback(null, err);
             });
-    }
+        }
 
     register(userInfo: any, callback): void {
         const headers = new HttpHeaders().set("Content-Type", "application/json");
@@ -38,7 +35,7 @@ export class UserService {
             res => {
                 console.log(res);
                 callback(res);
-            });
+            })
     }
 
     isLoggedIn(callback: any) : void {

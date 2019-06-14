@@ -35,3 +35,30 @@ mat-card.side {
     margin-top: 0px;
     display: block;
 }
+
+button.username {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 25px;
+    height: 70%;
+    width: 10%;
+    top: 50%;
+    right: 3%;
+    position: absolute;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: transparent;
+}
+
+button.logout {
+    font-family: "Gill Sans", sans-serif;
+    font-size: 25px;
+    width: 10%;
+    height: 70%;
+    top: 121%;
+    right: 3%;
+    position: absolute;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: #E2F5D9;
+    z-index: 1;
+}

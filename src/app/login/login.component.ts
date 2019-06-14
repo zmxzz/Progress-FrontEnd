@@ -19,8 +19,14 @@ export class LoginComponent {
     }
 
     public login(): void {
-        this.userService.authenticate(this.username, this.password, () => {
-            this.router.navigate(['/profile']);
+        this.userService.authenticate(this.username, this.password, (res, err) => {
+            if (res) {
+                this.router.navigate(['/profile']);
+            }
+            else {
+                this.router.navigate(['/login']);
+                throw err;
+            }
         });
     }
     

@@ -10,4 +10,7 @@
     <div class="container" *ngIf="page==='commit'">
         <app-commit-info (pageEvent)="receivePage($event)" [task]="selectedTask"></app-commit-info>
     </div>
+    <div class="container" *ngIf="page==='activities'">
+        <app-commit-history></app-commit-history>
+    </div>
 </mat-card>
